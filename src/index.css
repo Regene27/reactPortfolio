@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.icon-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.portrait {
+  border-radius: 15%;
+  height: auto;
+  width: 300px;
+}
