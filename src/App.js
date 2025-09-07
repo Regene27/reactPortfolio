@@ -66,35 +66,44 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-black flex flex-row">
-      <Navbar />
-      <div className="flex-1 overflow-y-auto">
-        <section
-          id="home"
-          className="min-h-screen flex items-center justify-center"
-        >
-          <HomePage hellos={hellos} />
-        </section>
-        <section
-          id="profile"
-          className="min-h-screen flex items-center justify-center"
-        >
-          <ProfilePage />
-        </section>
-        <section
-          id="projects"
-          className="min-h-screen flex items-center justify-center"
-        >
-          <ProjectsPage />
-        </section>
-        <section
-          id="contact"
-          className="min-h-screen flex items-center justify-center"
-        >
-          <ContactPage />
-        </section>
+    <>
+      {/* Show message on mobile screens */}
+      <div className="sm:hidden min-h-screen flex items-center justify-center bg-black">
+        <div className="text-white text-center text-xl font-bold p-8">
+          Please open in a computer
+        </div>
       </div>
-    </div>
+      {/* Show app only on screens sm and up */}
+      <div className="hidden sm:flex min-h-screen bg-black flex-col sm:flex-row">
+        <Navbar />
+        <div className="flex-1 overflow-y-auto w-full">
+          <section
+            id="home"
+            className="min-h-screen flex items-center justify-center px-2 sm:px-0"
+          >
+            <HomePage hellos={hellos} />
+          </section>
+          <section
+            id="profile"
+            className="min-h-screen flex items-center justify-center px-2 sm:px-0"
+          >
+            <ProfilePage />
+          </section>
+          <section
+            id="projects"
+            className="min-h-screen flex items-center justify-center px-2 sm:px-0"
+          >
+            <ProjectsPage />
+          </section>
+          <section
+            id="contact"
+            className="min-h-screen flex items-center justify-center px-2 sm:px-0"
+          >
+            <ContactPage />
+          </section>
+        </div>
+      </div>
+    </>
   );
 }
 
